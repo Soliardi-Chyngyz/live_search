@@ -29,7 +29,7 @@ class AppSearchTextField extends StatelessWidget {
       prefixIcon: Padding(
         padding: const EdgeInsets.all(10.0),
         child: SvgPicture.asset(
-          'assets/icons/search.svg',
+          'icons/search.svg',
           fit: BoxFit.none,
           width: 10,
           height: 10,

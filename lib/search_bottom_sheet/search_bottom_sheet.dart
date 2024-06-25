@@ -119,7 +119,7 @@ class SearchBottomSheet extends HookWidget with ComparatorManager {
                       Colors.grey,
                       BlendMode.srcIn,
                     ),
-                    'assets/icons/arrow_down.svg',
+                    'icons/arrow_down.svg',
                   )
                 ],
               ));
@@ -235,7 +235,7 @@ class SearchBottomSheet extends HookWidget with ComparatorManager {
                                           style: itemStyle,
                                         ),
                                       ),
-                                      if (value == item) SvgPicture.asset('assets/icons/ic_check.svg')
+                                      if (value == item) SvgPicture.asset('icons/ic_check.svg')
                                     ],
                                   ));
                             }),
