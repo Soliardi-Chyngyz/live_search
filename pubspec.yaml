@@ -26,35 +26,39 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/icons/
+    - icons/arrow_down.svg
+    - icons/ic_check.svg
+    - icons/search.svg
 
-  
-  
-  
-  
 
-  
-  
 
-  
-  
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ic_check:
+  svg:
