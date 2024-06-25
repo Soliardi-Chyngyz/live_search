@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:live_search/mixin/comparator_manager.dart';
 import 'package:live_search/rounded_container/custom_rounded_container.dart';
 import 'package:live_search/text_field/app_search_text_field.dart';
@@ -27,6 +26,8 @@ class SearchBottomSheet extends HookWidget with ComparatorManager {
     this.bottomSheetLabelStyle,
     this.itemStyle,
     this.highlightStyle,
+    this.checkIcon,
+    this.prefixIcon,
   });
 
   final String? label;
@@ -47,6 +48,8 @@ class SearchBottomSheet extends HookWidget with ComparatorManager {
   final Color borderColor;
   final Color? barrierColor;
   final Color? bottomSheetBackgroundColor;
+  final Widget? checkIcon;
+  final Widget? prefixIcon;
 
   @override
   build(context) {
@@ -114,13 +117,7 @@ class SearchBottomSheet extends HookWidget with ComparatorManager {
                     location.isEmpty ? hint : location,
                     style: locationStyle,
                   ),
-                  SvgPicture.asset(
-                    colorFilter: const ColorFilter.mode(
-                      Colors.grey,
-                      BlendMode.srcIn,
-                    ),
-                    'icons/arrow_down.svg',
-                  )
+                  if (prefixIcon != null) prefixIcon!
                 ],
               ));
         }),
@@ -235,7 +232,7 @@ class SearchBottomSheet extends HookWidget with ComparatorManager {
                                           style: itemStyle,
                                         ),
                                       ),
-                                      if (value == item) SvgPicture.asset('icons/ic_check.svg')
+                                      if (value == item && checkIcon != null) checkIcon!
                                     ],
                                   ));
                             }),

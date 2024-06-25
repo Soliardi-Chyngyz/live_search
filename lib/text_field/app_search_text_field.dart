@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:live_search/text_field/app_text_field.dart';
 
 class AppSearchTextField extends StatelessWidget {
@@ -8,6 +7,7 @@ class AppSearchTextField extends StatelessWidget {
   final bool enabled;
   final String hintText;
   final BoxFit boxFit;
+  final Widget? prefixIcon;
 
   const AppSearchTextField({
     super.key,
@@ -16,6 +16,7 @@ class AppSearchTextField extends StatelessWidget {
     this.enabled = true,
     this.hintText = 'Поиск',
     this.boxFit = BoxFit.none,
+    this.prefixIcon,
   });
 
   @override
@@ -26,15 +27,7 @@ class AppSearchTextField extends StatelessWidget {
       onChanged: onChanged,
       enabled: enabled,
       hintText: hintText,
-      prefixIcon: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: SvgPicture.asset(
-          'icons/search.svg',
-          fit: BoxFit.none,
-          width: 10,
-          height: 10,
-        ),
-      ),
+      prefixIcon: prefixIcon,
     );
   }
 }
