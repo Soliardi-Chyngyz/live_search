@@ -1,5 +1,8 @@
 # live_search
 
+https://github.com/Soliardi-Chyngyz/live_search/assets/66687051/e16212db-3c78-4640-9b41-064ee3b24ecc
+
+
 Используйте SearchBottomSheet только внутри родительского виджеты HookWidget
 также доступны виджеты:
 
