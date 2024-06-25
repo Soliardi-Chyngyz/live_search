@@ -20,3 +20,9 @@ SearchBottomSheet(
         _selectedItem = onSelectedItem });
         });
 ```
+
+Чтобы стянуть либу вбейте этот текст в bubspec.yaml и введите команду **flutter pub get**
+```
+dependencies:
+  live_search:
+    git: https://github.com/Soliardi-Chyngyz/live_search.git 
